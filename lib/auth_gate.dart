@@ -17,7 +17,26 @@ class AuthGate extends StatelessWidget {
            providers: [EmailAuthProvider(),
            
            ],
-           
+           headerBuilder: (context, constraints, shrinkOffset) {return Scaffold(
+        backgroundColor: Theme.of(context).colorScheme.onBackground,
+        body: Center(
+          child: Align(alignment: Alignment.center,
+            child: Column(
+                // mainAxisAlignment: MainAxisAlignment.center,
+                
+                children: [
+                  
+                  Transform.scale(
+                    scale: 2,
+                    child:
+                        Image.asset('assets/logo.png', height: 100, width: 50)
+                            .animate()
+                            .fade(duration: 2.seconds,delay: 2.seconds)
+                            
+                  ),
+                ]),
+          ),
+        ));},
            
            subtitleBuilder: (context, action) {
              return Padding(
@@ -50,19 +69,7 @@ class AuthGate extends StatelessWidget {
                     child: RichText(
                       text: TextSpan(
                         text: 'Welcome To',
-                        style: DefaultTextStyle.of(context).style.copyWith(
-                              foreground: Paint()
-                                ..shader = LinearGradient(
-                                  colors: [
-                                    Color.fromRGBO(125, 177, 228, 0.996),
-                                    Color.fromRGBO(7, 86, 245, 0.988),
-                                    
-                                  ],
-                                ).createShader(
-                                  Rect.fromLTWH(0.0, 0.0, 200.0, 70.0),
-                                ),
-                              decoration: TextDecoration.none,
-                            ),
+                        style:TextStyle(color:Theme.of(context).colorScheme.primary )
                       ),
                     ).animate().fade(duration: 2.seconds)
                   ),

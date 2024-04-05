@@ -28,7 +28,7 @@ class _HomePageState extends State<HomePage> {
             appBar: AppBar(
               backgroundColor: Theme.of(context).colorScheme.primary,
               title: Text(
-                'Welcome ${widget.name} to MyMail  :)',
+                'Welcome to MyMail  :)',
                 style: TextStyle(
                   color: Theme.of(context).colorScheme.onPrimary,
                 ),
@@ -216,7 +216,7 @@ class _HomePageState extends State<HomePage> {
             appBar: AppBar(
               backgroundColor: Theme.of(context).colorScheme.primary,
               title: Text(
-                'Welcome ${widget.name} ',
+                'Welcome',
                 style: TextStyle(
                   color: Theme.of(context).colorScheme.onPrimary,
                 ),
